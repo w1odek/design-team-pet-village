@@ -41,6 +41,13 @@ h1, h2, h3, h4, h5, h6 {
   /* Pixel art grass pattern on the bottom could go here, or just simple colors */
 }
 
+.hero-image {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
 .home-title {
   color: var(--farm-white);
   text-shadow: 4px 4px 0px var(--farm-dark-green);

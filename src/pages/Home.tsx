@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { designers } from '../designers';
+import heroImage from '../assets/hero.webp';
 
 const Home: React.FC = () => {
   return (
     <div className="home-container">
+      <img src={heroImage} alt="Pet Village Hero" className="hero-image" />
       <h1 className="home-title">Design Team Pet Village</h1>
       <div className="designer-grid">
         {designers.map((designer) => (
