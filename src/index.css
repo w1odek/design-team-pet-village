@@ -1,0 +1,156 @@
+:root {
+  --farm-green: #8fd032;
+  --farm-dark-green: #487e1c;
+  --farm-dirt: #9e6d42;
+  --farm-sky: #8ed8f8;
+  --farm-white: #ffffff;
+  --farm-black: #111111;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'VT323', monospace;
+  background-color: var(--farm-sky);
+  color: var(--farm-black);
+  font-size: 24px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Press Start 2P', monospace;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* Home Page specific styles */
+.home-container {
+  background-color: var(--farm-sky);
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Pixel art grass pattern on the bottom could go here, or just simple colors */
+}
+
+.home-title {
+  color: var(--farm-white);
+  text-shadow: 4px 4px 0px var(--farm-dark-green);
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.designer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.designer-card {
+  background-color: var(--farm-green);
+  border: 4px solid var(--farm-dark-green);
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--farm-black);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s, box-shadow 0.1s;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.9rem;
+}
+
+.designer-card:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  background-color: #a0db4b;
+}
+
+/* Designer Page specific styles */
+.designer-page {
+  background-color: var(--farm-white);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.designer-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.back-link {
+  font-family: 'Press Start 2P', monospace;
+  text-decoration: none;
+  color: var(--farm-black);
+  margin-bottom: 2rem;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border: 4px solid var(--farm-black);
+  background-color: #f0f0f0;
+  box-shadow: 4px 4px 0px var(--farm-black);
+  font-size: 0.8rem;
+}
+
+.back-link:hover {
+  background-color: #e0e0e0;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--farm-black);
+}
+
+.designer-title {
+  color: var(--farm-black);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pet-image-container {
+  width: 200px;
+  height: 200px;
+  border: 4px solid var(--farm-black);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  margin: 0 auto;
+}
+
+.pet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated; /* To maintain retro feel if images are small */
+}
+
+.no-pets {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #666;
+  grid-column: 1 / -1;
+  padding: 3rem;
+  border: 4px dashed #ccc;
+}
