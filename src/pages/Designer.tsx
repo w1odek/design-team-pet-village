@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { designers } from '../designers';
 
 // Dynamically import all images in the pets directory
-const petImageModules = import.meta.glob('/src/assets/pets/**/*.{png,jpg,jpeg,gif,webp,svg}', { eager: true, as: 'url' });
+const petImageModules = import.meta.glob('/src/assets/pets/**/*.{png,jpg,jpeg,gif,webp,svg}', { eager: true, query: '?url', import: 'default' });
 
 const Designer: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
