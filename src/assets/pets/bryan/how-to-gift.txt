@@ -1,0 +1,7 @@
+How to gift a pet:
+1. Find an image (.png, .jpg, .gif, etc.)
+2. Name it using the format PetName_YourName.ext (e.g., Fluffy_Dagny.png)
+3. Place it in this folder
+4. Create a Pull Request and assign it to the owner of this folder!
+
+Note: Never gift yourself a pet!
