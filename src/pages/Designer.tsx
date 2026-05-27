@@ -24,7 +24,25 @@ const Designer: React.FC = () => {
   const folderPath = `/src/assets/pets/${slug}/`;
   const designerPets = Object.entries(petImageModules)
     .filter(([path]) => path.startsWith(folderPath))
-    .map(([, url]) => url as string);
+    .map(([path, url]) => {
+      // Extract filename without extension
+      const filename = path.split('/').pop()?.split('.')[0] || 'Unknown';
+      
+      let petName = filename;
+      let gifterName = '';
+
+      if (filename.includes('_')) {
+        const parts = filename.split('_');
+        petName = parts[0];
+        gifterName = parts.slice(1).join('_'); // In case there are multiple underscores
+      }
+
+      return {
+        url: url as string,
+        petName,
+        gifterName
+      };
+    });
 
   return (
     <div className="designer-page">
@@ -35,9 +53,17 @@ const Designer: React.FC = () => {
       
       {designerPets.length > 0 ? (
         <div className="pet-grid">
-          {designerPets.map((url, index) => (
-            <div key={index} className="pet-image-container">
-              <img src={url} alt={`${designer.name}'s pet`} className="pet-image" />
+          {designerPets.map((pet, index) => (
+            <div key={index} className="pet-card">
+              <div className="pet-image-container">
+                <img src={pet.url} alt={pet.petName} className="pet-image" />
+              </div>
+              <div className="pet-info">
+                <div className="pet-name">{pet.petName}</div>
+                {pet.gifterName && (
+                  <div className="pet-gifter">gifted by {pet.gifterName}</div>
+                )}
+              </div>
             </div>
           ))}
         </div>
