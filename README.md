@@ -35,10 +35,6 @@ In Git/GitHub, create a new branch. You can think of a branch as your own privat
 * Commit your changes, push your branch, and open a **Pull Request** on GitHub to suggest merging your branch into the main project.
 * In the PR description, write a nice note about the pet you're gifting!
 
-### 5. Assign the PR to the Recipient 👑
-* **Crucial step:** Assign the Pull Request to the designer who is receiving the gift.
-* They will get a notification, review the incoming pet, and merge the PR to officially welcome the new companion to their garden!
-
 ---
 
 ## 🌿 Running the Village Locally
